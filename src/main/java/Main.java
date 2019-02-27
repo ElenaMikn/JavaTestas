@@ -4,7 +4,7 @@ interface Garsas {void skleisti();}
 class Zebras implements Garsas{@Override public void skleisti(){}}
 class Motociklas implements Garsas{@Override public void skleisti(){}}
 
-interface Procesas extends Runnable{}
+interface Procesas extends Runnable,Cloneable,Comparable{};
 //class Gija extends Process{}
 public class Main {
     public static void main(String[] args )
@@ -41,6 +41,12 @@ public class Main {
         {
             System.out.println(zebru_sarasa);
         }
+        System.out.println(koordinetes(10,20));
+        System.out.println(koordinetes(8,32.0));
+        System.out.println(koordinetes(8.0,32.0));
 
     }
+    static String koordinetes(int x, int y){return "x:"+x+", y:"+y; }
+    static String koordinetes(double x, double y){return "x:"+x+", y:"+y; }
+    static String koordinetes(int x, double y){return "x:"+x+", y:"+y; }
 }
