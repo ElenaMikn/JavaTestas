@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+interface Garsas {void skleisti();}
+class Zebras implements Garsas{@Override public void skleisti(){}}
+class Motociklas implements Garsas{@Override public void skleisti(){}}
 public class Main {
     public static void main(String[] args )
     {
@@ -22,5 +27,17 @@ public class Main {
 
         //5 ats: Į ekrana išves "Automobilis{ratas=Michellin}" Nes perrašėmeme standartines funkcijas kad tokiu fomratu.
         System.out.println(new Automobilis(new Ratas()));
+
+        //6:ats: grąžina klaidą "Exception in thread "main" java.lang.ClassCastException: java.lang.Object cannot be cast to Garsas", o pašalinus šita eilute atspausdina "Zebras@445b84c0
+        //Motociklas@61a52fbd" tai yra objekto klases pavadinimą ir adresą
+        List<Garsas> zebru_sarasas=  new ArrayList<>();
+        zebru_sarasas.add(new Zebras());
+        zebru_sarasas.add(new Motociklas());
+        //zebru_sarasas.add((Garsas) new Object());
+        for(Garsas zebru_sarasa: zebru_sarasas)
+        {
+            System.out.println(zebru_sarasa);
+        }
+
     }
 }
