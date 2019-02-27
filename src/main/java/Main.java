@@ -13,5 +13,13 @@ public class Main {
         System.out.println(su_kableliu );
         String simboliu_eilute = 22+"";
         System.out.println(simboliu_eilute );
+
+        //
+        Seimas seimas= new Seimas();
+        Parlamentaras parlamentaras = new Parlamentaras("Petras","Petraitis");
+        seimas.prideti_seimo_nary(parlamentaras);
+        seimas.perziureti_narius();
+
+
     }
 }

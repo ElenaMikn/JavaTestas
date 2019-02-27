@@ -1,18 +1,22 @@
+import java.util.ArrayList;
 public class Seimas {
-   protected  Parlamentaras[] parlamentaras;
-   public Seimas(Parlamentaras[] parlamentaras)
+   protected  ArrayList<Parlamentaras> parlamentaras;
+   public Seimas() {
+       this.parlamentaras= new ArrayList<Parlamentaras>();
+   }
+   public Seimas(ArrayList<Parlamentaras>  parlamentaras)
    {
        this.parlamentaras=parlamentaras;
    }
    protected void prideti_seimo_nary(Parlamentaras parlamentaras)
    {
-        this.parlamentaras[this.parlamentaras.length]=parlamentaras;
+        this.parlamentaras.add(parlamentaras);
    }
    protected void perziureti_narius()
    {
-       for (int i=0;i<this.parlamentaras.length;i++)
+       for(Parlamentaras str:this.parlamentaras)
        {
-           System.out.println(this.parlamentaras[i].vardas+this.parlamentaras[i].pavarde);
+           System.out.println(str.vardas+" "+str.pavarde);
        }
    }
 }
