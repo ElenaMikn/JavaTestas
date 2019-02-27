@@ -20,6 +20,7 @@ public class Main {
         seimas.prideti_seimo_nary(parlamentaras);
         seimas.perziureti_narius();
 
-
+        //5 ats: Į ekrana išves "Automobilis{ratas=Michellin}" Nes perrašėmeme standartines funkcijas kad tokiu fomratu.
+        System.out.println(new Automobilis(new Ratas()));
     }
 }
