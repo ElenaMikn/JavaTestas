@@ -3,6 +3,9 @@ import java.util.List;
 interface Garsas {void skleisti();}
 class Zebras implements Garsas{@Override public void skleisti(){}}
 class Motociklas implements Garsas{@Override public void skleisti(){}}
+
+interface Procesas extends Runnable{}
+//class Gija extends Process{}
 public class Main {
     public static void main(String[] args )
     {
