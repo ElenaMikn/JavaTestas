@@ -7,9 +7,7 @@ class Motociklas implements Garsas{@Override public void skleisti(){}}
 interface Procesas extends Runnable,Cloneable,Comparable{};
 //class Gija extends Process{}
 public class Main {
-    public static void main(String[] args )
-    {
-
+    public static void main(String[] args ) {
         //Kurie iš priskyrimo sakinių yra sintaksiškai teisingi JAVA JDK 1.8?
         int skaicius ='x';
         System.out.println(skaicius );
@@ -45,8 +43,24 @@ public class Main {
         System.out.println(koordinetes(8,32.0));
         System.out.println(koordinetes(8.0,32.0));
 
+        new Menuo();
     }
     static String koordinetes(int x, int y){return "x:"+x+", y:"+y; }
     static String koordinetes(double x, double y){return "x:"+x+", y:"+y; }
     static String koordinetes(int x, double y){return "x:"+x+", y:"+y; }
+
+
+
+}
+
+enum Sezonas {PAVASARIS, VASARĄ, RUDUO, ZIENA}
+
+class Menuo
+{
+    public Menuo(){this("Rugsėjis");}
+    private  Menuo(String menuo){this(menuo,Sezonas.RUDUO);}
+    private  Menuo(String menuo, Sezonas sezonas)
+    {
+        System.out.println("Menuo: "+menuo+", Sezonas: "+sezonas.name()+".");
+    }
 }
